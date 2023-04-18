@@ -1,10 +1,10 @@
 name: My Project Pull Request
 
 on:
-#  push:
-#    branches: [ "main" ]
+  #  push:
+  #    branches: [ "main" ]
   pull_request:
-    types: [opened,edited,reopened]
+    types: [ opened,edited,reopened ]
 
 jobs:
   build:
@@ -23,5 +23,4 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - name: Request
-        run : echo "${{toJSON(github.event)}}"
-
+        run: echo "${{toJSON(github.event)}}"
