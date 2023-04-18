@@ -23,8 +23,11 @@ jobs:
       - name: dependencies
         run : npm ci
 
-      - name: lint app
+      - name: lint
         run: npm run lint
+
+      - name: build
+        run: npm run build
 
       - name: print
         run: echo Build success
