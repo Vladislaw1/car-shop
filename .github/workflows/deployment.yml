@@ -20,9 +20,6 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: Print
-        run: echo ${{context}}
-
       - name: dependencies
         run: npm install
 
