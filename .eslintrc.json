@@ -5,7 +5,9 @@
   },
   "extends": [
     "plugin:react/recommended",
-    "google"
+    "prettier",
+    "prettier/react",
+    "plugin:react/recommended"
   ],
   "overrides": [
   ],
@@ -16,6 +18,19 @@
   "plugins": [
     "react"
   ],
-  "rules": {
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".scss"
+        ],
+        "moduleDirectory": [
+          "node_modules",
+          "src/"
+        ]
+      }
+    }
   }
 }
