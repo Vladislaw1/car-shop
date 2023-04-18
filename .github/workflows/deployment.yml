@@ -1,10 +1,9 @@
-name: My Project Pull Request
+name: My Project Actions Push
 
 on:
-#  push:
-#    branches: [ "main" ]
-  pull_request:
-    types: [opened,edited,reopened]
+    push:
+      branches: [ "main" ]
+
 
 jobs:
   build:
@@ -22,6 +21,11 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: Request
-        run : echo "${{toJSON(github.event)}}"
+      - name: dependencies
+        run : npm ci
 
+      - name: lint
+        run: npm run lint
+
+      - name: build
+        run: npm run build
