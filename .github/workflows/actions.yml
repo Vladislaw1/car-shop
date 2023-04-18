@@ -22,8 +22,8 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-       - name: Request
-         run : echo "${{toJSON(github.event)}}"
+      - name: Request
+        run : echo "${{toJSON(github.event)}}"
 
 #      - name: dependencies
 #        run : npm ci
