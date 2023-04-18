@@ -23,19 +23,8 @@ jobs:
       - name: dependencies
         run : npm ci
 
-      - name: print
-        run: echo Build success
-
-    lint:
-      - uses: actions/checkout@v3
-
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node-version }}
-
-      - name: dependencies
-        run: npm ci
-
       - name: lint app
         run: npm run lint
+
+      - name: print
+        run: echo Build success
