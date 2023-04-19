@@ -3,7 +3,8 @@ run-name: ${{ github.base_ref }} - Build Branch. ${{ github.head_ref }}
 
 on:
   pull_request:
-    branches: [ 'main' ]
+    branches:
+      - main
 
 jobs:
   build:
