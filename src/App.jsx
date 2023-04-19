@@ -1,15 +1,8 @@
 import React from 'react';
 import './App.css';
-import Header from './components/Header';
-import Footer from './components/Footer';
+import { RouterProvider } from 'react-router';
+import { routing } from './routing';
 
-function App() {
-  return (
-    <>
-      <Header />
-      <Footer />
-    </>
-  );
-}
+const App = () => <RouterProvider router={routing} />;
 
 export default App;

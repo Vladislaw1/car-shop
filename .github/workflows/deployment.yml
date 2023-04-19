@@ -3,7 +3,8 @@ run-name: ${{ github.base_ref }} - Build Branch. ${{ github.head_ref }}
 
 on:
   push:
-    branches: [ "main" ]
+    branches:
+      - main
 
 
 jobs:
@@ -19,9 +20,6 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-
-      - name: Print
-        run: echo ${{context}}
 
       - name: dependencies
         run: npm install
