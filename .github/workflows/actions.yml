@@ -22,7 +22,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - name: dependencies
-        run: cd /home/runner/work/car-shop/package-lock.json && npm ci
+        run: npm ci
 
       - name: lint
         run: npm run lint
