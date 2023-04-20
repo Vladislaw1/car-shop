@@ -1,7 +1,8 @@
-import React from 'react';
-import s from './FilterPanel.module.scss';
+import React from "react";
+import s from "./FilterPanel.module.scss";
 
-function FilterPanel({ children }) {
+// eslint-disable-next-line react/prop-types
+function FilterPanel({ children = null }) {
   return (
     <div className={s.block}>
       {children}
