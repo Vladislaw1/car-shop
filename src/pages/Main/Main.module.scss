@@ -1,0 +1,45 @@
+.btn {
+  width: 30px;
+  height: 30px;
+  background: silver;
+  border-radius: 50%;
+  border: none;
+  position: fixed;
+  bottom: 30px;
+  right: 40px;
+
+  &:hover {
+    cursor: pointer;
+    background: grey;
+    box-shadow: 0 0 30px grey;
+  }
+}
+
+.formAddCar {
+  width: 200px;
+  text-align: center;
+  background: #010c0c96;
+  padding: 10px;
+  position: fixed;
+  bottom: 70px;
+  right: 55px;
+}
+
+.tooltipe {
+  font-size: 14px;
+  width: 200px;
+  text-align: center;
+  background: #010c0c96;
+  color: white;
+  padding: 10px;
+  position: fixed;
+  bottom: 70px;
+  right: 55px;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(100px, 1fr));
+  grid-gap: 10px;
+
+}

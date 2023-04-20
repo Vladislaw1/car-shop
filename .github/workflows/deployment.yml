@@ -1,11 +1,10 @@
 name: BRANCH
-run-name: ${{ github.base_ref }} - Build Branch. ${{ github.head_ref }}
+run-name: ${{ github.ref_name }} - ${{ github.event.commits[0].message }}
 
 on:
   push:
     branches:
       - main
-
 
 jobs:
   build:
@@ -16,13 +15,18 @@ jobs:
         node-version: [ 18.x ]
 
     steps:
-      - name: Use Node.js ${{ matrix.node-version }}
+      - uses: actions/checkout@v3
+
+      - name: 🚚 Get latest code
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
 
+      - name: Print
+        run: echo "${{toJSON(github)}}"
+
       - name: dependencies
-        run: npm install
+        run: npm ci
 
       - name: lint
         run: npm run lint
