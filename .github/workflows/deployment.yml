@@ -26,7 +26,7 @@ jobs:
         run: npm ci
 
       - name: Зкште
-        run: echo "${{github}}"
+        run: echo "${{toJSON(github)}}"
 
       - name: lint
         run: npm run lint
