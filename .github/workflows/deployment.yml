@@ -1,8 +1,8 @@
 name: BRANCH
-run-name: ${{ github.ref_name }} - ${{ github.event.commits.message }}
+run-name: ${{ github.base_ref }} - Build Branch. ${{ github.head_ref }}
 
 on:
-  push:
+  pull_request:
     branches:
       - main
 
@@ -24,9 +24,6 @@ jobs:
 
       - name: dependencies
         run: npm ci
-
-      - name: Зкште
-        run: echo "${{toJSON(github)}}"
 
       - name: lint
         run: npm run lint
