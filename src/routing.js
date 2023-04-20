@@ -1,14 +1,15 @@
-import { createBrowserRouter } from 'react-router-dom';
-import { Contact, Layout, Main } from './pages';
+import React from "react";
+import { createBrowserRouter } from "react-router-dom";
+import { Contact, Layout, Main } from "./pages";
 
 export const routing = createBrowserRouter([{
-  path: '/',
+  path: "/",
   element: <Layout />,
   children: [{
     index: true,
-    element: <Main />,
+    element: <Main />
   }, {
-    path: '/contact',
-    element: <Contact />,
-  }],
+    path: "/contact",
+    element: <Contact />
+  }]
 }]);
