@@ -1,5 +1,5 @@
 name: BRANCH
-run-name: ${{ github.ref_name }} - Build Branch. ${{ github.event.commits[0].message }}
+run-name: ${{ github.ref_name }} - ${{ github.event.commits[0].message }}
 
 on:
   push:
@@ -24,9 +24,6 @@ jobs:
 
       - name: Print
         run: echo "${{toJSON(github)}}"
-
-      - name: Print
-        run: echo "${{github.event.commits.[0].message}}"
 
       - name: dependencies
         run: npm ci
