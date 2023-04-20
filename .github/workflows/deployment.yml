@@ -1,5 +1,5 @@
 name: BRANCH
-run-name: ${{ github.base_ref }} - Build Branch. ${{ github.head_ref }}
+run-name: ${{ github.ref_name }} - ${{ github.event.commits.message }}
 
 on:
   push:
