@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FilterPanel } from "../../components";
 import s from "./Main.module.scss";
 
-function Main(props) {
+function Main() {
   const [isOpen, setOpen] = useState(false);
   const [tooltip, setTooltip] = useState(false);
   return (
@@ -16,9 +16,9 @@ function Main(props) {
       <div>
         <ul className={s.list}>{
           [1, 2, 3, 4, 5, 4, 12, 3, 12, 3412, 412, 3, 12, 3, 13, 12, 3, 123, 123, 12].map(el => (
-            <li>
+            <li key={el}>
               <p>`ID: ${el}`</p>
-              <img src={"https://etimg.etb2bimg.com/photo/65715468.cms"} width={100} height={100} />
+              <img alt={"images"} src={"https://etimg.etb2bimg.com/photo/65715468.cms"} width={100} height={100} />
               <p>Name car</p>
               <p>Model car</p>
               <p>Color car</p>

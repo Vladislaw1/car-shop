@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-function Contact(props) {
+function Contact() {
   return (
     <>
       Secondary Contact

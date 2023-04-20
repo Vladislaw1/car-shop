@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 
-function Footer(props) {
+function Footer() {
   return (
     <footer>
       <h1>Footer</h1>
-      
+
     </footer>
   );
 }
