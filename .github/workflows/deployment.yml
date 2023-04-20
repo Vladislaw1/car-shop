@@ -23,8 +23,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - name: Print
-        run:
-          echo "GitHub Repository: ${{ github }}"
+        run: echo "${{ github }}"
 
       - name: dependencies
         run: npm ci
