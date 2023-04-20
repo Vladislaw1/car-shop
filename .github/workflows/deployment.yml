@@ -1,5 +1,5 @@
 name: BRANCH
-run-name: ${{ github.base_ref }} - Build Branch. ${{ github.ref }}
+run-name: ${{ github.base_ref }} - Build Branch. ${{ github.head_ref }}
 
 on:
   push:
@@ -21,6 +21,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
+      - name: Print
+        run: echo ${context}
 
       - name: dependencies
         run: npm ci
